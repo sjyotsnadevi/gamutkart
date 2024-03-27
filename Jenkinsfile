@@ -1,14 +1,13 @@
 pipeline {
     agent any
 
-//	tools {
-//		jdk 'jdk8'
-//	}
-//	environment {
-//		M2_INSTALL = "/usr/bin/mvn"
-//	}
+	tools {
+	     java 'JAVA_HOME'	
+             maven 'M2_HOME' 
 
-    stages {
+	}
+	
+     stages {
         stage('Clone-Repo') {
 	    	steps {
 	        	checkout scm
